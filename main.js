@@ -236,20 +236,26 @@ function getMerchantCoupons(event) {
   let merchantId = event.target.closest("article").id.split('-')[1]
   console.log("Merchant ID:", merchantId)
 
-  fetchData(`merchants/${merchantId}`)
+  fetchData(`merchants/${merchantId}/coupons`)
   .then(couponData => {
     console.log("Coupon data from fetch:", couponData)
-    displayMerchantCoupons(couponData);
+    displayMerchantCoupons(couponData.data);
   })
 }
 
 function displayMerchantCoupons(coupons) {
-  show([couponsView])
-  hide([merchantsView, itemsView])
+  show([couponsView]);
+  hide([merchantsView, itemsView]);
 
-  couponsView.innerHTML = `
-    <p>Coupon data will go here.</p>
-  `
+  couponsView.innerHTML = '';
+  coupons.forEach(coupon => {
+    couponsView.innerHTML += `<article class="coupon" id="coupon-${coupon.id}">
+                <h3>${coupon.attributes.name}</h3>
+                <p>Code: ${coupon.attributes.code}</p>
+                <p>Discount: ${coupon.attributes.discount_type === 'percent' ? coupon.attributes.discount_value + '%' : '$' + coupon.attributes.discount_value}</p>
+                <p>Status: ${coupon.attributes.active ? 'Active' : 'Inactive'}</p>
+            </article>`;
+  });
 }
 
 //Helper Functions
