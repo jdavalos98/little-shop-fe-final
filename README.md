@@ -1,47 +1,32 @@
-# Little Shop - Coupon Codes | Final Project | Frontend Starter Repo
+# Little Shop - Coupon Codes | Final Project | Frontend Repo
+ 
 
-This Vite Little Shop - Coupon Codes FE Final Project Boilerplate is built to consume and display the data from the BE Rails API built in the Mod 2 Final Project.  
-
-## Set Up Instructions
-
-**Note:** Do **not** clone this repo into your backend repo. Put it somewhere else as a stand alone. The BE and FE repos will remain two separate repos and you will submit the links to each.  
-
-1. Fork repo
-1. Clone forked repo and rename it `git clone <repo> <new name>`
-1. `cd` into cloned repo
-1. Run `npm install`
-1. Run `npm run dev` to start developing.
-  1. You'll see in the terminal that the project has opened at "http://localhost:5173/"
-
-## Notes
-
-This FE application is build to consume the data from your Rails API.  In order for it to work, you must have your Rails API running on localhost:3000. You will see fetch errors when running the FE without the BE API up and running.  
-
-Follow the directions in the FE requirements portion of the Little Shop Coupon Codes final project spec. When you are finished with the FE work, update this README to remove the current content and follow the template below.  
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
-# Hang in There  
-
-Link to your GitHub. Consider also providing LinkedIn link
+### Contributors: jdavalos98
 
 ### Abstract:
-(Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+This project is a full-stack application designed to help manage and display coupon data for merchants. The application provides a user interface where users can view all coupons associated with a specific merchant. By integrating a Rails API backend with a vanilla JavaScript, CSS, and HTML frontend (built with Vite), this app makes it easy to browse, filter, and view detailed coupon information. It solves the problem of displaying coupon data dynamically in a user-friendly interface, helping merchants and users manage promotional data efficiently.
 
 ### Installation Instructions:
-(What steps does a person have to take to get your app cloned down and running?)
+1. clone down both front and backend repos
+2. Navigate to the backend directory
+3. Run bundle install
+4. rails db:{create,migrate,seed}
+5. run rails s
+6. Navigate to your frontend repo
+7. run nvm install
+8. run nvm test dev
+9. Now you can play around in the front end repo and postman requests
 
-### Preview of App:
-(Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off. gifs preferred!)
 
 ### Context:
-(Give some context for the project here. How long did you have to work on it? What specific work/improvements did you contribute to this FE application?)
+This project was completed over several weeks and involved setting up a fully functional Rails API, integrating it with a JavaScript frontend, and displaying merchant coupon data dynamically. My contributions include implementing the coupon endpoints in the backend and ensuring that they integrate smoothly with the frontend to allow for easy coupon viewing and filtering.
 
 ### Learning Goals:
-(What were the learning goals of this project? What tech did you work with?)
+The learning goals of this project were to:
 
-### Wins + Challenges:
-(What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+	•	Build a Rails API with RESTful CRUD functionality.
+	•	Implement conditional logic and filtering for merchant-specific coupon data.
+	•	Integrate a vanilla JavaScript frontend with the Rails API backend.
+	•	Utilize HTML, CSS, and JavaScript to create a cohesive user interface.
+	•	Gain experience with Vite as a frontend build tool.
+
